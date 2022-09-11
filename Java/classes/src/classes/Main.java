@@ -58,7 +58,8 @@ package classes;
  		* import package.name.*;   // import whole package 
  	* user-defined packages
  * Inheritance	
-	 
+ * Polymorphism
+ * Abstraction	 
  */
 
 import java.util.Scanner;
@@ -67,26 +68,30 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		Car myCar = new Car();
-		System.out.println(myCar.color);
+		//Car myCar = new Car();
+		//System.out.println(myCar.color);
 		
 		// modify the attributes
-		myCar.color = "red";
-		System.out.println(myCar.color);		
+		//myCar.color = "red";
+		//System.out.println(myCar.color);		
 		// use final keyword if you don't want to override the existing values
 		
-		Car myNewCar = new Car("toyota", "camry", 2022, "blue");
-		System.out.println(myNewCar.aboutCar());
+		//Car myNewCar = new Car("toyota", "camry", 2022, "blue");
+		//System.out.println(myNewCar.aboutCar());
 		
 		// Scanner 
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter your name");
+		//Scanner input = new Scanner(System.in);
+		//System.out.println("Enter your name");
 		
-		String enteredName = input.nextLine();
-		System.out.println(enteredName);
+		//String enteredName = input.nextLine();
+		//System.out.println(enteredName);
 		
 		
+		Cat myCat = new Cat(2,2,"meow");
+		myCat.sound();
 		
+		Dog myDog = new Dog();
+		System.out.println(myDog.toString());
 	}
 
 }
