@@ -64,6 +64,10 @@ package classes;
 
 import java.util.Scanner;
 
+import javaclasses.Cat;
+import javaclasses.Dog;
+import javaclasses.Horse;
+
 // use the keyword class to create class
 public class Main {
 
@@ -87,11 +91,22 @@ public class Main {
 		//System.out.println(enteredName);
 		
 		
-		Cat myCat = new Cat(2,2,"meow");
-		myCat.sound();
-		
+		Cat myCat = new Cat();
 		Dog myDog = new Dog();
-		System.out.println(myDog.toString());
+		Horse myHorse = new Horse();
+		
+		myCat.sound();
+		myDog.sound();
+		myHorse.sound();
+		
+		System.out.println("Enter name: ");
+		Scanner myObj = new Scanner(System.in);
+		String txt = myObj.nextLine();
+		myObj.close();
+		
+		System.out.println(txt);
+
+		
 	}
 
 }
