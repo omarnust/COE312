@@ -64,10 +64,6 @@ package classes;
 
 import java.util.Scanner;
 
-import javaclasses.Cat;
-import javaclasses.Dog;
-import javaclasses.Horse;
-
 // use the keyword class to create class
 public class Main {
 
