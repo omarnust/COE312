@@ -2,9 +2,10 @@
 public class Member {
 	String name;
 	double age;
-	public Member(String n, double a) {
-		this.name = n;
-		this.age= a; 
+	
+	public Member(String name, double age) {
+		this.name = name;
+		this.age= age; 
 		}
 	public Member() { 
 		this.name = null;

@@ -7,12 +7,14 @@
  * (without any changes to the program).  
  * You are not allowed to make any changes to this program. 
  * Expected Output:
- * title:Comfortably Numb album
- * The Wall length:6.21 minutes 
+ * title:Comfortably Numb 
+ * album:The Wall 
+ * length:6.21 minutes 
  * released in:1979
  * band members: 
- * Roger Waters Bob 
- * Klos Nick Mason 
+ * Roger Waters 
+ * Bob Klos 
+ * Nick Mason 
  * David Gilmore
  * average age:76.75 years
  */
@@ -27,7 +29,9 @@ public class Main {
 			new Member("David Gilmore", 77)};
 		
 		Band b = new Band("Pink Floyd",ms);
-		Track t1 = new Track("Comfortably Numb", b, "The Wall", /*int*/ 1979, /*length(double)*/6.21);
+		Track t1 = new Track(/*title(String)*/"Comfortably Numb", 
+				             /*Band*/ b, /*name of the album*/"The Wall", 
+				             /*year(int)*/ 1979, /*length(double)*/6.21);
 		System.out.println(t1);
 	}
 

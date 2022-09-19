@@ -4,6 +4,7 @@ public class Track {
 	String album; 
 	int year; 
 	double length;
+	
 	public Track(String t, Band b, String a, int y, double l) {
 		this.title = t; 
 		this.band= b; 
@@ -18,6 +19,7 @@ public class Track {
 		this.year=0; 
 		this.length=0.0;
 	}
+	
 	@Override
 	public String toString() {
 		return "Title: "+title+"\nAlbum: "+album+"\nLength:"+
