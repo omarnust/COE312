@@ -1,5 +1,7 @@
 import java.io.FileOutputStream;  
 import java.io.IOException;
+import java.util.Arrays;
+import java.io.FileInputStream;
 
 public class FileExample {
 	public static void run() {
@@ -35,6 +37,67 @@ public class FileExample {
         } catch (IOException e) {  
             System.err.println("Error");  
         }  
+	}
+	
+	public static void run3() {
+		try {
+			FileInputStream fin = new FileInputStream("testin.txt");
+			
+			int i = fin.read(); // reads a byte
+			
+			System.out.print((char) i); // convert it into char. 
+
+			// close the file -- it will also flush (we don't care)
+			fin.close();
+			
+		}catch(IOException e) {
+			System.err.println(e);
+		}
+	}
+	
+	public static void run4() {
+		try {
+			FileInputStream fin = new FileInputStream("testin.txt");
+			
+			int i = 0;
+			// using -1 as an EOF
+			while ((i = fin.read()) != -1) {
+				System.out.print((char) i);
+			}
+			
+			/*
+			boolean eof=false;
+			while(!eof) {	
+				// if there is atleast one byte
+				if(fin.available()>0) {
+					i=fin.read(); // read it
+					if(i==-1) eof=true; // -1 so exit
+					System.out.println((char)i ); // print
+				}	
+			}
+			*/
+	
+		}catch(IOException e) {
+			System.err.println(e);
+		}
+	}
+	
+	public static void run5() {
+		try {
+			FileInputStream fin = new FileInputStream("testin.txt");
+			int len = fin.available();
+			byte[] data = new byte[len];
+			int i = fin.read(data);
+			
+			for (byte b: data) {
+				System.out.print((char)b);
+			}
+			 
+			fin.close();
+			
+		}catch(IOException e) {
+			System.err.println(e);
+		}
 	}
 	
 }

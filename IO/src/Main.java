@@ -12,8 +12,8 @@ public class Main {
 			System.err.println("Error");
 		}
 		*/
-		
-		FileExample.run2();
+	
+		FileExample.run5();
 		
 	}
 
