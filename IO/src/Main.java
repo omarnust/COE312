@@ -2,7 +2,7 @@
 import java.io.IOException;
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
 		/*
 		try {
@@ -13,7 +13,12 @@ public class Main {
 		}
 		*/
 	
-		FileExample.run5();
+		//FileExample.run5();
+		
+		//BufferExample.run2();
+		
+		DataExample.run1();
+		DataExample.run2();
 		
 	}
 

@@ -3,7 +3,10 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.io.FileInputStream;
 
+// This class contains static methods to illustrate FileOutputStream and FileInputSteam methods
 public class FileExample {
+	
+	// FileOutputStream method write a char to file
 	public static void run() {
 		try {  
 			FileOutputStream fout=new FileOutputStream("testout.txt"); 
@@ -21,6 +24,7 @@ public class FileExample {
         }  
 	}
 	
+	// FileOutputStream method write bytes to file
 	public static void run2() {
 		try {  
 			FileOutputStream fout=new FileOutputStream("testout.txt"); 
@@ -39,6 +43,7 @@ public class FileExample {
         }  
 	}
 	
+	// FileInputStream methods read a bytes 
 	public static void run3() {
 		try {
 			FileInputStream fin = new FileInputStream("testin.txt");
@@ -55,6 +60,7 @@ public class FileExample {
 		}
 	}
 	
+	// FileInputStream methods read bytes
 	public static void run4() {
 		try {
 			FileInputStream fin = new FileInputStream("testin.txt");
@@ -68,7 +74,7 @@ public class FileExample {
 			/*
 			boolean eof=false;
 			while(!eof) {	
-				// if there is atleast one byte
+				// if there is at least one byte
 				if(fin.available()>0) {
 					i=fin.read(); // read it
 					if(i==-1) eof=true; // -1 so exit
@@ -76,12 +82,12 @@ public class FileExample {
 				}	
 			}
 			*/
-	
 		}catch(IOException e) {
 			System.err.println(e);
 		}
 	}
 	
+	// FileInputStream methods read bytes
 	public static void run5() {
 		try {
 			FileInputStream fin = new FileInputStream("testin.txt");
