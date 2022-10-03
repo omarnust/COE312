@@ -47,7 +47,7 @@ public class FileExample {
 	public static void run3() {
 		try {
 			FileInputStream fin = new FileInputStream("testin.txt");
-			
+		
 			int i = fin.read(); // reads a byte
 			
 			System.out.print((char) i); // convert it into char. 
@@ -64,7 +64,7 @@ public class FileExample {
 	public static void run4() {
 		try {
 			FileInputStream fin = new FileInputStream("testin.txt");
-			
+			 
 			int i = 0;
 			// using -1 as an EOF
 			while ((i = fin.read()) != -1) {
@@ -94,6 +94,7 @@ public class FileExample {
 			int len = fin.available();
 			byte[] data = new byte[len];
 			int i = fin.read(data);
+			System.out.println("I have read " + len + " bytes");
 			
 			for (byte b: data) {
 				System.out.print((char)b);

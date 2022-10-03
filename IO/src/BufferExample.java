@@ -13,7 +13,8 @@ public class BufferExample {
 		try {
 			FileOutputStream fout = new FileOutputStream("output.txt");
 			
-			BufferedOutputStream bout = new BufferedOutputStream(System.out);
+			BufferedOutputStream bout = new BufferedOutputStream(fout);
+			
 			String txt = "Welcome to the class";
 			bout.write(txt.getBytes());
 			bout.flush();

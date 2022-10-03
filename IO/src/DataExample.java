@@ -12,8 +12,8 @@ public class DataExample {
 	public static void run1() throws IOException{
 		// instead of letting FileOutStream create a file, we
 		// can create a file and pass it to the stream.
-		File fh = new File("data.txt");
-		FileOutputStream fout = new FileOutputStream(fh);
+		//File fh = new File("data.txt");
+		FileOutputStream fout = new FileOutputStream("data.txt");
 			
 		DataOutputStream data = new DataOutputStream(fout);
 		
@@ -25,6 +25,7 @@ public class DataExample {
 		data.close();
 		
 		System.out.println("Succcess...");
+		
 	}
 	public static void run2() throws IOException{
 		FileInputStream input = new FileInputStream("data.txt");

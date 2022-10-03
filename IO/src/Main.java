@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 import java.io.IOException;
 public class Main {
 
@@ -17,8 +17,10 @@ public class Main {
 		
 		//BufferExample.run2();
 		
-		DataExample.run1();
-		DataExample.run2();
+		//DataExample.run1();
+		//DataExample.run2();
+		
+		
 		
 	}
 

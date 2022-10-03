@@ -1,0 +1,35 @@
+package implementing_runnable_interface;
+import java.util.Random;
+
+//Thread Example by implementing runnable
+public class ThreadDemo implements Runnable{	
+	private String threadName;
+	Random r = new Random();
+	private Thread t;
+	
+	ThreadDemo(String name){
+		threadName = name;
+		System.out.println("Creating " +  threadName );
+		
+		t = new Thread(this);
+		t.start();
+	}
+	
+	public void run() {
+		System.out.println("Running " +  threadName );
+	      try {
+	         for(int i = 4; i > 0; i--) {
+	            System.out.println(threadName + ": " + r.nextInt(0,100));
+	            // Let the thread sleep for a while.
+	            Thread.sleep(150);
+	         }
+	      }catch (InterruptedException e) {
+	         System.out.println("Thread " +  threadName + " interrupted.");
+	      }
+	      System.out.println("Thread " +  threadName + " exiting.");
+	}
+	public Thread getThread() {
+		return t;
+	}
+
+}
