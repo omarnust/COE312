@@ -5,6 +5,9 @@ public class Main{
 		ThreadDemo m1 = new ThreadDemo("Thread 1");
 		ThreadDemo m2 = new ThreadDemo("Thread 2");
 		
+		
+		
+		
 		m1.getThread().join();
 		m2.getThread().join();
 		System.out.println("Main has ended");
