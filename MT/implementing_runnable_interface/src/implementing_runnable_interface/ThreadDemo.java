@@ -1,7 +1,6 @@
 package implementing_runnable_interface;
 import java.util.Random;
 
-//Thread Example by implementing runnable
 public class ThreadDemo implements Runnable{	
 	private String threadName;
 	Random r = new Random();

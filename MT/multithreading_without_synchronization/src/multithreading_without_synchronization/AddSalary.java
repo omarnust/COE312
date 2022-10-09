@@ -12,16 +12,13 @@ public class AddSalary extends Thread{
 	
 	public void run() {
 		try {
-			
-			System.out.println(threadName + " Reading salary");
-			int a = bank.accountA;
-			
-			Thread.sleep(1);
-			
-			System.out.println(threadName + " Adding salary AED 3");
-			a += 3;
-			bank.accountA = a;
-
+			//synchronized(bank) {
+				System.out.println(threadName + " Reading salary");
+				int a = bank.getAccountA();	
+				Thread.sleep(1);
+				System.out.println(threadName + " Adding salary AED 3");
+				bank.setAccountA(a + 3);
+			//}
 			
 		}catch(InterruptedException e) {
 			
