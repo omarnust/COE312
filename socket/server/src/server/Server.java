@@ -11,7 +11,7 @@ public class Server {
 			System.out.println("Listening for connection on 6666");
 			while(true) {
 				Socket s=ss.accept();//establishes connection   
-				System.out.println("Connection");
+				System.out.println("Connection established");
 		
 				DataOutputStream dout=new DataOutputStream(s.getOutputStream());  
 				dout.writeUTF("Welcome");    

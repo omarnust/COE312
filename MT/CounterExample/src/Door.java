@@ -1,10 +1,12 @@
 
 public class Door implements Runnable{
 	public Thread t;
-	Counter counter;	
+	Counter counter;
+	int totalPeople;
 	
-	Door(Counter c){
+	Door(Counter c, int totalPeople){
 		counter = c;
+		this.totalPeople = totalPeople;
 		t = new Thread(this);
 		t.start();
 	}
@@ -16,13 +18,13 @@ public class Door implements Runnable{
 	}
 	
 	public void run_nosynchronization() {
-		for (int i=0; i<5; i++) {
+		for (int i=0; i<totalPeople; i++) {
 			counter.addCounter();
 		}
 	}
 	
 	public void run_withBlocksynchronization() {
-		for (int i=0; i<5; i++) {
+		for (int i=0; i<totalPeople; i++) {
 			synchronized(counter) {
 			counter.addCounter();
 			}

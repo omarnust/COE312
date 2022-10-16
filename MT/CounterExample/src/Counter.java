@@ -9,14 +9,14 @@ public class Counter {
 	}
 	// public synchronized void addCounter() {
 	public void addCounter() {	
-		try {
+		//try {
 			int val = count;
-			Thread.sleep(0);
+			//Thread.sleep(0);
 			count = val+1;
 			System.out.println("Counter: " + 
 				       Integer.toString(count));
-		}catch(Exception e) {
+		//}catch(Exception e) {
 			
-		}
+		//}
 	}
 }

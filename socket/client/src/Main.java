@@ -1,12 +1,13 @@
 import java.io.*;  
-import java.net.*;  
+import java.net.Socket;  
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try{      
-			Socket s=new Socket("localhost",6666);  
+			Socket s=new Socket("localhost", 6666);
+			
 			DataInputStream din=new DataInputStream(s.getInputStream());  
 			System.out.println(din.readUTF());  
 			  
