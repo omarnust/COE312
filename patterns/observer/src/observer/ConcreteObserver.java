@@ -11,7 +11,6 @@ public class ConcreteObserver implements Observer {
 	}
 
 	// default update function
-	
 	public void update() {
 		System.out.println("do nothing from " + this);
 	}

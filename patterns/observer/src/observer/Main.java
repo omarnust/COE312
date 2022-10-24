@@ -11,7 +11,8 @@ public class Main {
 
 		// add alice to the mix
 		Alice a = new Alice(c1);
-		AliceSingle b = AliceSingle.getInstance(c1);	
+		AliceSingle b = AliceSingle.getInstance(c1);
+		
 	}
 
 }

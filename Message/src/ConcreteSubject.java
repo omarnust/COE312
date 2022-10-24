@@ -1,6 +1,5 @@
-package observer;
+
 import java.util.ArrayList;
-import java.util.Date;
 
 public class ConcreteSubject implements Subject {
 	private ArrayList<Observer> observers;
@@ -9,11 +8,12 @@ public class ConcreteSubject implements Subject {
 		observers = new ArrayList<Observer>();
 	}
 
-	public void notifyObservers() {
+	// change notifyobserver to send message
+	public void publishMessage(Message m) {
 		for (int i = 0; i < observers.size(); i++) {
-			Observer observer = observers.get(i);
-			observer.update();
-			//observer.update(new Date());
+			Observer observer = (Observer) observers.get(i);
+			// observer.update();
+			observer.update(m);
 		}
 	}
 
@@ -24,4 +24,6 @@ public class ConcreteSubject implements Subject {
 	public void removeObsever(Observer o) {
 		observers.remove(o);
 	}
+
+	
 }
