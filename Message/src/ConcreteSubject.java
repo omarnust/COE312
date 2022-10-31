@@ -8,11 +8,11 @@ public class ConcreteSubject implements Subject {
 		observers = new ArrayList<Observer>();
 	}
 
-	// change notifyobserver to send message
+	// change notify observer to send message
 	public void publishMessage(Message m) {
 		for (int i = 0; i < observers.size(); i++) {
 			Observer observer = (Observer) observers.get(i);
-			// observer.update();
+			//observer.update();
 			observer.update(m);
 		}
 	}

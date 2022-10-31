@@ -15,8 +15,13 @@ public class ConcreteObserver implements Observer {
 	}
 
 	@Override
-	public void update(Message m) {
+	public synchronized void update(Message m) {
 		System.out.println(m);	
 	}
+	
+	public void update() {
+		System.out.println("no input arguments");
+	}
+	
 	
 }

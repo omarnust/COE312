@@ -2,7 +2,7 @@
 public class Main {
 
 	public static void main(String[] args) {
-		TCP_Client phone = new TCP_Client("192.168.68.101", 56693); // to start the server
+		TCP_Client phone = new TCP_Client("10.25.140.193", 61525); // to start the server
 		
 		Clock c1 = new Clock(1);
 		Clock c2 = new Clock(5);
