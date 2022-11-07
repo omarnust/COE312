@@ -2,27 +2,27 @@
 public class Main {
 
 	public static void main(String[] args) {
-		TCP_Client phone = new TCP_Client("10.25.140.193", 61525); // to start the server
+		//TCP_Client phone = new TCP_Client("10.25.140.193", 61525); // to start the server
 		
-		Clock c1 = new Clock(1);
-		Clock c2 = new Clock(5);
+		//Clock c1 = new Clock(1);
+		//Clock c2 = new Clock(5);
 		//Clock c3 = new Clock(10);
 		
-		ConcreteSubject[] subjects = {phone,c1, c2};// c3};
+		//ConcreteSubject[] subjects = {phone,c1, c2};// c3};
 	
 		//SimpleObserver o1 = new SimpleObserver(subjects);	
 		//ComplexObserver o2 = new ComplexObserver(subjects);
 		
-	    MoreComplexObserver o3 = new MoreComplexObserver(subjects);
+	    //MoreComplexObserver o3 = new MoreComplexObserver(subjects);
 		
 		
-		//UI ui = new UI();
+		UI ui = new UI();
 		
-		//ConcreteSubject[] subjects = {ui};
+		ConcreteSubject[] subjects = {ui};
 		
-		//UIClient c1 = new UIClient(subjects);
-		//UIClient c2 = new UIClient(subjects);
-		//ui.UIWrite("Hello from the UI Subject");
+		UIClient c1 = new UIClient(subjects);
+		UIClient c2 = new UIClient(subjects);
+		ui.UIWrite("Hello from the UI Subject");
 
 	}
 
